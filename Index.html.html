@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeLink - Diseño de Calidad para Microempresas</title>
+    
+    <!-- Carga de Tailwind CSS (Biblioteca Externa) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Carga de Fuente (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Carga de Lucide Icons (Biblioteca Externa para Iconos) -->
+    <script src="https://unpkg.com/lucide-dev@latest"></script>
+
+    <style>
+        /* Estilo base para aplicar la fuente y el color de fondo */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #0B0A0F;
+            color: #F5F5F7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Colores personalizados de la marca para Tailwind */
+        .tailwind-config {
+            display: none;
+        }
+    </style>
+    
+    <!-- Configuración personalizada de Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-dark': '#0B0A0F',      // Fondo principal
+                        'brand-card': '#1C1A20',      // Fondo de tarjetas
+                        'brand-light': '#F5F5F7',     // Texto principal
+                        'brand-muted': '#A1A1AA',     // Texto secundario
+                        'brand-primary': '#A855F7',   // Púrpura
+                        'brand-secondary': '#EC4899', // Rosa/Magenta
+                    },
+                    borderRadius: {
+                        'xl': '1rem', // 16px
+                        '2xl': '1.5rem', // 24px
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-dark font-montserrat text-brand-light">
+
+    <!-- Contenedor principal -->
+    <div class="overflow-x-hidden">
+
+        <!-- ===== Header / Navegación ===== -->
+        <header class="absolute top-0 left-0 right-0 z-10">
+            <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex justify-between items-center">
+                <!-- Logo -->
+                <div>
+                    <a href="#" class="text-3xl font-bold text-white">WeLink</a>
+                </div>
+                
+                <!-- Links de Navegación (Escritorio) -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#" class="text-brand-muted hover:text-white transition-colors">Explorar</a>
+                    <a href="#" class="text-brand-muted hover:text-white transition-colors">Sobre nosotros</a>
+                    <a href="#" class="text-brand-muted hover:text-white transition-colors">Nuestros Planes</a>
+                    <a href="#" class="text-brand-muted hover:text-white transition-colors">Como funciona</a>
+                </div>
+                
+                <!-- Botón CTA (Escritorio) -->
+                <div class="hidden md:block">
+                    <a href="#contacto" class="bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold px-6 py-3 rounded-full hover:opacity-90 transition-opacity">
+                        Iniciar consulta
+                    </a>
+                </div>
+
+                <!-- Botón de Menú (Móvil) -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-white">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </nav>
+            
+            <!-- Menú Móvil -->
+            <div id="mobile-menu" class="hidden md:hidden bg-brand-card absolute top-full left-0 right-0 shadow-lg">
+                <div class="flex flex-col space-y-4 p-6">
+                    <a href="#" class="text-white text-lg">Explorar</a>
+                    <a href="#" class="text-white text-lg">Sobre nosotros</a>
+                    <a href="#" class="text-white text-lg">Nuestros Planes</a>
+                    <a href="#" class="text-white text-lg">Como funciona</a>
+                    <a href="#contacto" class="bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold px-6 py-3 rounded-full hover:opacity-90 transition-opacity text-center mt-4">
+                        Iniciar consulta
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- ===== Hero Section ===== -->
+        <main class="relative pt-32 lg:pt-48">
+            <!-- Fondo degradado borroso -->
+            <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+                <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+            </div>
+
+            <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Contenido de Texto -->
+                <div class="text-center lg:text-left">
+                    <span class="text-brand-secondary font-semibold">Más que una marca</span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mt-4 leading-tight">
+                        Diseño de Calidad para
+                        <span class="bg-gradient-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent">Microempresas</span>
+                    </h1>
+                    <p class="mt-6 text-lg text-brand-muted max-w-lg mx-auto lg:mx-0">
+                        Un proyecto increíble necesita diseños que impulse ventas, no solo diseños bonitos. Llevamos tu marca al siguiente nivel.
+                    </p>
+                    <div class="mt-10">
+                        <a href="#planes" class="bg-white text-brand-dark font-semibold px-8 py-4 rounded-full hover:bg-gray-200 transition-colors">
+                            Diseños que vende
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Imagen -->
+                <div class="hidden lg:block">
+                    <img src="https://placehold.co/600x600/1C1A20/FFFFFF?text=Imagen+Hero" 
+                         onerror="this.src='https://placehold.co/600x600/1C1A20/FFFFFF?text=Imagen+Hero'"
+                         alt="Persona trabajando en diseño web" 
+                         class="rounded-2xl shadow-2xl w-full h-auto object-cover">
+                </div>
+            </section>
+        </main>
+
+        <!-- ===== Sección de Características ===== -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Característica 1 -->
+                <div class="bg-brand-card p-8 rounded-2xl transform hover:scale-105 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-brand-primary/20 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="bar-chart-2" class="text-brand-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Diseño que vende</h3>
+                    <p class="text-brand-muted">Te presentamos un diseño premium, totalmente personalizado para tu modelo de negocio.</p>
+                </div>
+                <!-- Característica 2 -->
+                <div class="bg-brand-card p-8 rounded-2xl transform hover:scale-105 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-brand-primary/20 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="file-text" class="text-brand-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Planes Sin Sorpresas</h3>
+                    <p class="text-brand-muted">Te presentamos planes cerrados de servicios, no pagas costos extras ni ocultos.</p>
+                </div>
+                <!-- Característica 3 -->
+                <div class="bg-brand-card p-8 rounded-2xl transform hover:scale-105 transition-transform duration-300">
+                    <div class="w-12 h-12 bg-brand-primary/20 rounded-lg flex items-center justify-center mb-6">
+                        <i data-lucide="shield-check" class="text-brand-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Garantía de Calidad</h3>
+                    <p class="text-brand-muted">Te presentamos un diseño premium, totalmente personalizado para tu modelo de negocio.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Sección de Proceso ===== -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white">
+                    Tu Éxito es <span class="bg-gradient-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent">Nuestro Proceso</span>
+                </h2>
+                <p class="mt-4 text-lg text-brand-muted">
+                    Simplificamos el proceso de diseño estratégico en 3 pasos clave, listos para que tú te dediques a crecer.
+                </p>
+            </div>
+            
+            <div class="mt-20 grid md:grid-cols-3 gap-10">
+                <!-- Paso 1 -->
+                <div class="flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x300/1C1A20/A855F7?text=Briefing" 
+                         onerror="this.src='https://placehold.co/400x300/1C1A20/A855F7?text=Briefing'"
+                         alt="Briefing y Estrategia" class="rounded-2xl shadow-lg mb-6 w-full">
+                    <h3 class="text-xl font-bold text-white">Briefing y estrategia</h3>
+                    <p class="text-brand-muted mt-2">Es el punto de partida clave para alinear tus objetivos con un producto de valor a tu medida.</p>
+                </div>
+                <!-- Paso 2 -->
+                <div class="flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x300/1C1A20/EC4899?text=Ejecución" 
+                         onerror="this.src='https://placehold.co/400x300/1C1A20/EC4899?text=Ejecución'"
+                         alt="Ejecución Apasionada" class="rounded-2xl shadow-lg mb-6 w-full">
+                    <h3 class="text-xl font-bold text-white">Ejecución apasionada</h3>
+                    <p class="text-brand-muted mt-2">Aplicamos la estrategia y diseño, con un seguimiento de los procesos y avances.</p>
+                </div>
+                <!-- Paso 3 -->
+                <div class="flex flex-col items-center text-center">
+                    <img src="https://placehold.co/400x300/1C1A20/A855F7?text=Entrega" 
+                         onerror="this.src='https://placehold.co/400x300/1C1A20/A855F7?text=Entrega'"
+                         alt="Control de Calidad y Entrega" class="rounded-2xl shadow-lg mb-6 w-full">
+                    <h3 class="text-xl font-bold text-white">Control de Calidad y Entrega</h3>
+                    <p class="text-brand-muted mt-2">Auditamos todo el trabajo realizado, y listo para impulsar tu negocio.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Sección Sobre Nosotros ===== -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-16 items-center">
+            <!-- Imagen -->
+            <div>
+                <img src="https://placehold.co/600x450/1C1A20/FFFFFF?text=Equipo+en+reunión" 
+                     onerror="this.src='https://placehold.co/600x450/1C1A20/FFFFFF?text=Equipo+en+reunión'"
+                     alt="Equipo de WeLink en una reunión estratégica" 
+                     class="rounded-2xl shadow-xl w-full object-cover">
+            </div>
+            
+            <!-- Texto -->
+            <div>
+                <span class="font-semibold text-brand-primary">Un poco sobre nosotros</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mt-4">Tu Socio de Diseño Estratégico en Bogotá</h2>
+                
+                <div class="mt-10 space-y-8">
+                    <!-- Valores -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-brand-primary/20 rounded-lg flex items-center justify-center">
+                            <i data-lucide="heart" class="text-brand-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">Nuestros Valores</h3>
+                            <p class="mt-2 text-brand-muted">Diseño estratégico con un propósito, colaboración abierta y transparente, y una búsqueda incansable de la excelencia. Creemos en construir relaciones sólidas.</p>
+                        </div>
+                    </div>
+                    <!-- Misión -->
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-brand-primary/20 rounded-lg flex items-center justify-center">
+                            <i data-lucide="target" class="text-brand-primary"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-white">Nuestra Misión</h3>
+                            <p class="mt-2 text-brand-muted">Empoderar a las microempresas con diseños de alta calidad que no solo impresionen visualmente, sino que también generen resultados tangibles, impulsando su crecimiento y éxito.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Sección de Servicios ===== -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white text-center">Nuestras características y servicios</h2>
+            
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Servicio 1 -->
+                <div class="bg-brand-card p-6 rounded-2xl text-center flex flex-col items-center">
+                    <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center">
+                        <i data-lucide="sparkles" class="text-brand-primary"></i>
+                    </div>
+                    <h3 class="mt-4 font-bold text-white">Identidad y Branding</h3>
+                </div>
+                <!-- Servicio 2 -->
+                <div class="bg-brand-card p-6 rounded-2xl text-center flex flex-col items-center">
+                    <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center">
+                        <i data-lucide="thumbs-up" class="text-brand-primary"></i>
+                    </div>
+                    <h3 class="mt-4 font-bold text-white">Contenido para redes</h3>
+                </div>
+                <!-- Servicio 3 -->
+                <div class="bg-brand-card p-6 rounded-2xl text-center flex flex-col items-center">
+                    <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center">
+                        <i data-lucide="layout-template" class="text-brand-primary"></i>
+                    </div>
+                    <h3 class="mt-4 font-bold text-white">Páginas Web y Tiendas</h3>
+                </div>
+                <!-- Servicio 4 -->
+                <div class="bg-brand-card p-6 rounded-2xl text-center flex flex-col items-center">
+                    <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center">
+                        <i data-lucide="line-chart" class="text-brand-primary"></i>
+                    </div>
+                    <h3 class="mt-4 font-bold text-white">Marketing Digital</h3>
+                </div>
+                <!-- Servicio 5 -->
+                <div class="bg-brand-card p-6 rounded-2xl text-center flex flex-col items-center">
+                    <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center">
+                        <i data-lucide="book-open" class="text-brand-primary"></i>
+                    </div>
+                    <h3 class="mt-4 font-bold text-white">Diseño Editorial</h3>
+                </div>
+            </div>
+
+            <!-- CTA Trabajos -->
+            <div class="text-center mt-20">
+                <a href="#" class="bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold px-8 py-4 rounded-full hover:opacity-90 transition-opacity">
+                    MIRA NUESTROS TRABAJOS
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== Sección de Precios ===== -->
+        <section id="planes" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="text-center max-w-3xl mx-auto">
+                <span class="font-semibold text-brand-primary">Planes de precios</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white mt-4">Para su negocio creativo</h2>
+            </div>
+            
+            <!-- Pestañas de Precios -->
+            <div id="tabs-container" class="flex justify-center flex-wrap gap-2 sm:gap-4 my-12">
+                <button data-tab="tab1" class="tab-btn bg-brand-primary text-white font-semibold px-5 py-2 rounded-full">Identidad visual</button>
+                <button data-tab="tab2" class="tab-btn bg-brand-card text-brand-muted font-semibold px-5 py-2 rounded-full hover:bg-gray-700">Marketing Digital</button>
+                <button data-tab="tab3" class="tab-btn bg-brand-card text-brand-muted font-semibold px-5 py-2 rounded-full hover:bg-gray-700">Diseño editorial</button>
+            </div>
+
+            <!-- Contenido de Pestañas -->
+            <div id="tabs-content">
+                <!-- Tab 1: Identidad Visual -->
+                <div id="tab1" class="tab-content">
+                    <div class="grid lg:grid-cols-3 gap-8 items-start">
+                        <!-- Plan Básico -->
+                        <div class="bg-brand-card p-8 rounded-2xl border-2 border-transparent">
+                            <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6">
+                                <i data-lucide="gem" class="text-brand-primary"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Básico</h3>
+                            <p class="text-4xl font-extrabold text-white my-4">$488.000 <span class="text-lg font-normal text-brand-muted">COP</span></p>
+                            <ul class="space-y-3 text-brand-muted">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>2 Propuestas de logo</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Paleta de color</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Tipografías</li>
+                            </ul>
+                            <a href="#" class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors">Comprar paquete</a>
+                        </div>
+                        
+                        <!-- Plan Estándar (Destacado) -->
+                        <div class="bg-brand-card p-8 rounded-2xl border-2 border-brand-primary shadow-2xl shadow-brand-primary/30 transform lg:scale-105">
+                            <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6">
+                                <i data-lucide="star" class="text-brand-primary"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Estándar</h3>
+                            <p class="text-4xl font-extrabold text-white my-4">$925.000 <span class="text-lg font-normal text-brand-muted">COP</span></p>
+                            <ul class="space-y-3 text-brand-muted">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>4 Propuestas de logo</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Manual de marca</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Diseño de 5 posts</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Plantillas editables</li>
+                            </ul>
+                            <a href="#" class="mt-8 block w-full text-center bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold py-3 rounded-full hover:opacity-90 transition-opacity">Comprar paquete</a>
+                        </div>
+
+                        <!-- Plan Premium -->
+                        <div class="bg-brand-card p-8 rounded-2xl border-2 border-transparent">
+                            <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6">
+                                <i data-lucide="rocket" class="text-brand-primary"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Premium</h3>
+                            <p class="text-4xl font-extrabold text-white my-4">$1.465.000 <span class="text-lg font-normal text-brand-muted">COP</span></p>
+                            <ul class="space-y-3 text-brand-muted">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Todo lo de Estándar</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Diseño de 10 posts</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Asesoría de marca</li>
+                            </ul>
+                            <a href="#" class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors">Comprar paquete</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Marketing Digital (Contenido de ejemplo) -->
+                <div id="tab2" class="tab-content hidden">
+                    <div class="text-center text-brand-muted">
+                        <p>Planes de Marketing Digital próximamente. Contáctanos para un plan a medida.</p>
+                        <!-- Aquí iría una grilla similar a la de arriba -->
+                    </div>
+                </div>
+                
+                <!-- Tab 3: Diseño Editorial (Contenido de ejemplo) -->
+                <div id="tab3" class="tab-content hidden">
+                    <div class="text-center text-brand-muted">
+                        <p>Planes de Diseño Editorial próximamente. Contáctanos para un plan a medida.</p>
+                        <!-- Aquí iría una grilla similar a la de arriba -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Sección Cómo Funciona ===== -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-16 items-center">
+            <!-- Texto -->
+            <div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-white">¿Cómo funciona?</h2>
+                <p class="mt-4 text-lg text-brand-muted">
+                    Te presentamos el checklist de nuestro equipo y el proceso de diseño para que lo tengas claro.
+                </p>
+            </div>
+            
+            <!-- Lista de Pasos -->
+            <div class="space-y-8">
+                <!-- Paso 1 -->
+                <div class="flex items-start space-x-6">
+                    <div class="flex-shrink-0 w-12 h-12 bg-brand-primary/20 rounded-full flex items-center justify-center">
+                        <span class="font-bold text-xl text-brand-primary">01</span>
+                    </div>
+                    <div>
+                        <p class="text-brand-muted">Te presentamos nuestro contacto o base de nuestro equipo y el proceso de diseño para que lo tengas claro.</p>
+                    </div>
+                </div>
+                <!-- Paso 2 -->
+                <div class="flex items-start space-x-6">
+                    <div class="flex-shrink-0 w-12 h-12 bg-brand-primary/20 rounded-full flex items-center justify-center">
+                        <span class="font-bold text-xl text-brand-primary">02</span>
+                    </div>
+                    <div>
+                        <p class="text-brand-muted">Te presentamos nuestro contacto o base de nuestro equipo y el proceso de diseño para que lo tengas claro.</p>
+                    </div>
+                </div>
+                <!-- Paso 3 -->
+                <div class="flex items-start space-x-6">
+                    <div class="flex-shrink-0 w-12 h-12 bg-brand-primary/20 rounded-full flex items-center justify-center">
+                        <span class="font-bold text-xl text-brand-primary">03</span>
+                    </div>
+                    <div>
+                        <p class="text-brand-muted">Te presentamos nuestro contacto o base de nuestro equipo y el proceso de diseño para que lo tengas claro.</p>
+                    </div>
+                </div>
+                <!-- ... (Los pasos 4, 5, 6 son similares) ... -->
+            </div>
+        </section>
+
+        <!-- ===== Sección de Contacto (CTA Final) ===== -->
+        <section id="contacto" class="py-24 sm:py-32">
+            <div class="relative py-24 sm:py-32 bg-brand-card rounded-3xl max-w-6xl mx-auto px-6 lg:px-8 overflow-hidden">
+                <!-- Fondo degradado -->
+                <div class="absolute inset-x-0 -top-20 -z-10 transform-gpu overflow-hidden blur-3xl" aria-hidden="true">
+                    <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+                </div>
+
+                <div class="max-w-2xl mx-auto text-center">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-white">
+                        Hagamos que tu diseño <span class="bg-gradient-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent">crezca hoy!</span>
+                    </h2>
+                    <p class="mt-4 text-lg text-brand-muted">
+                        Un proyecto necesita diseños que impulse ventas, no solo diseños bonitos.
+                    </p>
+                </div>
+
+                <!-- Formulario de Contacto -->
+                <form action="#" method="POST" class="mt-16 max-w-xl mx-auto">
+                    <div class="grid grid-cols-1 gap-y-6 gap-x-8">
+                        <div>
+                            <label for="nombre" class="block text-sm font-semibold leading-6 text-white">Nombre</label>
+                            <div class="mt-2.5">
+                                <input type="text" name="nombre" id="nombre" autocomplete="name" class="block w-full rounded-lg border-0 bg-brand-dark/50 px-3.5 py-3 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6 transition-all" placeholder="Tu nombre completo">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-semibold leading-6 text-white">Email</label>
+                            <div class="mt-2.5">
+                                <input type="email" name="email" id="email" autocomplete="email" class="block w-full rounded-lg border-0 bg-brand-dark/50 px-3.5 py-3 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6 transition-all" placeholder="tu@email.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="mensaje" class="block text-sm font-semibold leading-6 text-white">Mensaje</Labe>
+                            <div class="mt-2.5">
+                                <textarea name="mensaje" id="mensaje" rows="4" class="block w-full rounded-lg border-0 bg-brand-dark/50 px-3.5 py-3 text-white shadow-sm ring-1 ring-inset ring-gray-700 placeholder:text-gray-500 focus:ring-2 focus:ring-inset focus:ring-brand-primary sm:text-sm sm:leading-6 transition-all" placeholder="Cuéntanos sobre tu proyecto..."></textarea>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <input id="terms" name="terms" type="checkbox" class="h-4 w-4 rounded border-gray-600 bg-brand-dark text-brand-primary focus:ring-brand-primary">
+                            <label for="terms" class="text-sm text-brand-muted">Acepto términos y condiciones</label>
+                        </div>
+                    </div>
+                    <div class="mt-10">
+                        <button type="submit" class="block w-full rounded-full bg-gradient-to-r from-brand-primary to-brand-secondary px-3.5 py-3 text-center text-sm font-semibold text-white shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary transition-opacity">
+                            Enviar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- ===== Footer ===== -->
+        <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div class="grid md:grid-cols-4 lg:grid-cols-6 gap-12">
+                <!-- Logo y Social -->
+                <div class="md:col-span-4 lg:col-span-2">
+                    <a href="#" class="text-3xl font-bold text-white">WeLink</a>
+                    <p class="text-brand-muted mt-4 max-w-xs">Diseño de calidad para microempresas que buscan crecer.</p>
+                    <div class="mt-6">
+                        <a href="#" class="text-brand-muted hover:text-white transition-colors">
+                            <i data-lucide="instagram" class="w-6 h-6"></i>
+                            <span class="sr-only">Instagram</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Links 1 -->
+                <div>
+                    <h4 class="font-semibold text-white">Compañía</h4>
+                    <ul class="mt-4 space-y-3">
+                        <li><a href="#" class="text-brand-muted hover:text-white">Inicio</a></li>
+                        <li><a href="#" class="text-brand-muted hover:text-white">¿Por qué nosotros?</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Links 2 -->
+                <div>
+                    <h4 class="font-semibold text-white">Servicios</h4>
+                    <ul class="mt-4 space-y-3">
+                        <li><a href="#" class="text-brand-muted hover:text-white">Servicios</a></li>
+                        <li><a href="#" class="text-brand-muted hover:text-white">Planes y precios</a></li>
+                        <li><a href="#" class="text-brand-muted hover:text-white">¿Cómo funciona?</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links 3 -->
+                <div>
+                    <h4 class="font-semibold text-white">Legal</h4>
+                    <ul class="mt-4 space-y-3">
+                        <li><a href="#" class="text-brand-muted hover:text-white">Política de privacidad</a></li>
+                        <li><a href="#" class="text-brand-muted hover:text-white">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="mt-16 pt-8 border-t border-gray-800 text-sm text-brand-muted text-center">
+                <p>&copy; 2025 WeLink. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts de Funcionalidad -->
+    <script>
+        // Inicializa los iconos de Lucide
+        lucide.createIcons();
+
+        // Funcionalidad del Menú Móvil
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Cambiar icono de menú a 'X' y viceversa
+            const icon = menuBtn.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.setAttribute('data-lucide', 'menu');
+            } else {
+                icon.setAttribute('data-lucide', 'x');
+            }
+            lucide.createIcons(); // Re-renderizar icono
+        });
+
+        // Funcionalidad de Pestañas de Precios
+        const tabsContainer = document.getElementById('tabs-container');
+        const tabsContent = document.getElementById('tabs-content');
+        
+        if (tabsContainer && tabsContent) {
+            const tabButtons = tabsContainer.querySelectorAll('.tab-btn');
+            const tabPanels = tabsContent.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const tabId = button.getAttribute('data-tab');
+
+                    // Actualizar botones
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('bg-brand-primary', 'text-white');
+                        btn.classList.add('bg-brand-card', 'text-brand-muted', 'hover:bg-gray-700');
+                    });
+                    button.classList.add('bg-brand-primary', 'text-white');
+                    button.classList.remove('bg-brand-card', 'text-brand-muted', 'hover:bg-gray-700');
+
+                    // Actualizar contenido
+                    tabPanels.forEach(panel => {
+                        if (panel.id === tabId) {
+                            panel.classList.remove('hidden');
+                        } else {
+                            panel.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        }
+    </script>
+</body>
+</html>

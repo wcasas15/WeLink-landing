@@ -7,6 +7,10 @@
     
     <!-- Carga de Tailwind CSS (Biblioteca Externa) -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
     
     <!-- Carga de Fuente (Google Fonts) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -134,9 +138,8 @@
                 
                 <!-- Imagen -->
                 <div class="hidden lg:block">
-                    <img src="https://placehold.co/600x600/1C1A20/FFFFFF?text=Imagen+Hero" 
-                         onerror="this.src='https://placehold.co/600x600/1C1A20/FFFFFF?text=Imagen+Hero'"
-                         alt="Persona trabajando en diseño web" 
+                    <img src="https://images.pexels.com/photos/4050388/pexels-photo-4050388.jpeg" 
+                         alt="Diseño de interfaz de usuario moderno para startups y microempresas" 
                          class="rounded-2xl shadow-2xl w-full h-auto object-cover">
                 </div>
             </section>
@@ -145,27 +148,21 @@
         <!-- ===== Sección de Características ===== -->
         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
             <div class="grid md:grid-cols-3 gap-8">
-                <!-- Característica 1 -->
-                <div class="bg-brand-card p-8 rounded-2xl transform hover:scale-105 transition-transform duration-300">
+                                <div class="bg-brand-card p-8 rounded-2xl transform hover:scale-105 transition-transform duration-300">
                     <div class="w-12 h-12 bg-brand-primary/20 rounded-lg flex items-center justify-center mb-6">
-                        <i data-lucide="bar-chart-2" class="text-brand-primary"></i>
-                    </div>
+                        <i data-lucide="palette" class="text-brand-primary"></i>                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">Diseño que vende</h3>
                     <p class="text-brand-muted">Te presentamos un diseño premium, totalmente personalizado para tu modelo de negocio.</p>
                 </div>
-                <!-- Característica 2 -->
-                <div class="bg-brand-card p-8 rounded-2xl transform hover:scale-105 transition-transform duration-300">
+                                <div class="bg-brand-card p-8 rounded-2xl transform hover:scale-105 transition-transform duration-300">
                     <div class="w-12 h-12 bg-brand-primary/20 rounded-lg flex items-center justify-center mb-6">
-                        <i data-lucide="file-text" class="text-brand-primary"></i>
-                    </div>
+                        <i data-lucide="dollar-sign" class="text-brand-primary"></i>                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">Planes Sin Sorpresas</h3>
                     <p class="text-brand-muted">Te presentamos planes cerrados de servicios, no pagas costos extras ni ocultos.</p>
                 </div>
-                <!-- Característica 3 -->
-                <div class="bg-brand-card p-8 rounded-2xl transform hover:scale-105 transition-transform duration-300">
+                                <div class="bg-brand-card p-8 rounded-2xl transform hover:scale-105 transition-transform duration-300">
                     <div class="w-12 h-12 bg-brand-primary/20 rounded-lg flex items-center justify-center mb-6">
-                        <i data-lucide="shield-check" class="text-brand-primary"></i>
-                    </div>
+                        <i data-lucide="star" class="text-brand-primary"></i>                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">Garantía de Calidad</h3>
                     <p class="text-brand-muted">Te presentamos un diseño premium, totalmente personalizado para tu modelo de negocio.</p>
                 </div>
@@ -215,7 +212,7 @@
         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-16 items-center">
             <!-- Imagen -->
             <div>
-                <img src="https://placehold.co/600x450/1C1A20/FFFFFF?text=Equipo+en+reunión" 
+                <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg" 
                      onerror="this.src='https://placehold.co/600x450/1C1A20/FFFFFF?text=Equipo+en+reunión'"
                      alt="Equipo de WeLink en una reunión estratégica" 
                      class="rounded-2xl shadow-xl w-full object-cover">
@@ -296,7 +293,7 @@
             <!-- CTA Trabajos -->
             <div class="text-center mt-20">
                 <a href="#" class="bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold px-8 py-4 rounded-full hover:opacity-90 transition-opacity">
-                    MIRA NUESTROS TRABAJOS
+                    Mira nuestros trabajos
                 </a>
             </div>
         </section>
@@ -308,22 +305,20 @@
                 <h2 class="text-3xl sm:text-4xl font-bold text-white mt-4">Para su negocio creativo</h2>
             </div>
             
-            <!-- Pestañas de Precios -->
             <div id="tabs-container" class="flex justify-center flex-wrap gap-2 sm:gap-4 my-12">
                 <button data-tab="tab1" class="tab-btn bg-brand-primary text-white font-semibold px-5 py-2 rounded-full">Identidad visual</button>
-                <button data-tab="tab2" class="tab-btn bg-brand-card text-brand-muted font-semibold px-5 py-2 rounded-full hover:bg-gray-700">Marketing Digital</button>
-                <button data-tab="tab3" class="tab-btn bg-brand-card text-brand-muted font-semibold px-5 py-2 rounded-full hover:bg-gray-700">Diseño editorial</button>
+                <button data-tab="tab2" class="tab-btn bg-brand-card text-brand-muted font-semibold px-5 py-2 rounded-full hover:bg-gray-700">Creación de contenido</button>
+                <button data-tab="tab3" class="tab-btn bg-brand-card text-brand-muted font-semibold px-5 py-2 rounded-full hover:bg-gray-700">Desarrollo Web</button>
+                <button data-tab="tab4" class="tab-btn bg-brand-card text-brand-muted font-semibold px-5 py-2 rounded-full hover:bg-gray-700">Marketing digital</button>
+                <button data-tab="tab5" class="tab-btn bg-brand-card text-brand-muted font-semibold px-5 py-2 rounded-full hover:bg-gray-700">Diseño editorial</button>
             </div>
 
-            <!-- Contenido de Pestañas -->
             <div id="tabs-content">
-                <!-- Tab 1: Identidad Visual -->
                 <div id="tab1" class="tab-content">
                     <div class="grid lg:grid-cols-3 gap-8 items-start">
-                        <!-- Plan Básico -->
                         <div class="bg-brand-card p-8 rounded-2xl border-2 border-transparent">
                             <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6">
-                                <i data-lucide="gem" class="text-brand-primary"></i>
+                                <i data-lucide="star" class="text-brand-primary"></i>
                             </div>
                             <h3 class="text-2xl font-bold text-white">Básico</h3>
                             <p class="text-4xl font-extrabold text-white my-4">$488.000 <span class="text-lg font-normal text-brand-muted">COP</span></p>
@@ -335,10 +330,9 @@
                             <a href="#" class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors">Comprar paquete</a>
                         </div>
                         
-                        <!-- Plan Estándar (Destacado) -->
                         <div class="bg-brand-card p-8 rounded-2xl border-2 border-brand-primary shadow-2xl shadow-brand-primary/30 transform lg:scale-105">
                             <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6">
-                                <i data-lucide="star" class="text-brand-primary"></i>
+                                <i data-lucide="gem" class="text-brand-primary"></i>
                             </div>
                             <h3 class="text-2xl font-bold text-white">Estándar</h3>
                             <p class="text-4xl font-extrabold text-white my-4">$925.000 <span class="text-lg font-normal text-brand-muted">COP</span></p>
@@ -351,7 +345,6 @@
                             <a href="#" class="mt-8 block w-full text-center bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold py-3 rounded-full hover:opacity-90 transition-opacity">Comprar paquete</a>
                         </div>
 
-                        <!-- Plan Premium -->
                         <div class="bg-brand-card p-8 rounded-2xl border-2 border-transparent">
                             <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6">
                                 <i data-lucide="rocket" class="text-brand-primary"></i>
@@ -368,27 +361,197 @@
                     </div>
                 </div>
 
-                <!-- Tab 2: Marketing Digital (Contenido de ejemplo) -->
                 <div id="tab2" class="tab-content hidden">
-                    <div class="text-center text-brand-muted">
-                        <p>Planes de Marketing Digital próximamente. Contáctanos para un plan a medida.</p>
-                        <!-- Aquí iría una grilla similar a la de arriba -->
+                    <div class="grid lg:grid-cols-3 gap-8 items-start">
+                        <div class="bg-brand-card p-8 rounded-2xl border-2 border-transparent">
+                            <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6">
+                                <i data-lucide="instagram" class="text-brand-primary"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Básico</h3>
+                            <p class="text-4xl font-extrabold text-white my-4">$350.000 <span class="text-lg font-normal text-brand-muted">COP</span></p>
+                            <ul class="space-y-3 text-brand-muted">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>10 diseños estáticos</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Propuesta de Copy</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Entrega en 48 horas</li>
+                            </ul>
+                            <a href="#" class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors">Comprar paquete</a>
+                        </div>
+                        
+                        <div class="bg-brand-card p-8 rounded-2xl border-2 border-brand-primary shadow-2xl shadow-brand-primary/30 transform lg:scale-105">
+                            <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6">
+                                <i data-lucide="film" class="text-brand-primary"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Estándar</h3>
+                            <p class="text-4xl font-extrabold text-white my-4">$800.000 <span class="text-lg font-normal text-brand-muted">COP</span></p>
+                            <ul class="space-y-3 text-brand-muted">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>20 diseños estáticos + 4 animaciones</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Guía de Estilo Visual</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Reunión de briefing semanal</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Archivos fuente editables</li>
+                            </ul>
+                            <a href="#" class="mt-8 block w-full text-center bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold py-3 rounded-full hover:opacity-90 transition-opacity">Comprar paquete</a>
+                        </div>
+
+                        <div class="bg-brand-card p-8 rounded-2xl border-2 border-transparent">
+                            <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6">
+                                <i data-lucide="bar-chart-3" class="text-brand-primary"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Premium</h3>
+                            <p class="text-4xl font-extrabold text-white my-4">$1.200.000 <span class="text-lg font-normal text-brand-muted">COP</span></p>
+                            <ul class="space-y-3 text-brand-muted">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Todo lo de Estándar</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Diseño de Reels (3 por mes)</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Reporte de métricas</li>
+                            </ul>
+                            <a href="#" class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors">Comprar paquete</a>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Tab 3: Diseño Editorial (Contenido de ejemplo) -->
+
                 <div id="tab3" class="tab-content hidden">
-                    <div class="text-center text-brand-muted">
-                        <p>Planes de Diseño Editorial próximamente. Contáctanos para un plan a medida.</p>
-                        <!-- Aquí iría una grilla similar a la de arriba -->
+                    <div class="grid lg:grid-cols-3 gap-8 items-start">
+                        <div class="bg-brand-card p-8 rounded-2xl border-2 border-transparent">
+                            <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6">
+                                <i data-lucide="file-text" class="text-brand-primary"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Landing Page</h3>
+                            <p class="text-4xl font-extrabold text-white my-4">$1.500.000 <span class="text-lg font-normal text-brand-muted">COP</span></p>
+                            <ul class="space-y-3 text-brand-muted">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Diseño y desarrollo de 1 sección</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Formulario de contacto</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Diseño responsive</li>
+                            </ul>
+                            <a href="#" class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors">Comprar paquete</a>
+                        </div>
+                        
+                        <div class="bg-brand-card p-8 rounded-2xl border-2 border-brand-primary shadow-2xl shadow-brand-primary/30 transform lg:scale-105">
+                            <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6">
+                                <i data-lucide="layout" class="text-brand-primary"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Sitio Básico</h3>
+                            <p class="text-4xl font-extrabold text-white my-4">$2.800.000 <span class="text-lg font-normal text-brand-muted">COP</span></p>
+                            <ul class="space-y-3 text-brand-muted">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Hasta 5 secciones</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Integración con CMS (WordPress)</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Optimización SEO básica</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Dominio y Hosting por 1 año</li>
+                            </ul>
+                            <a href="#" class="mt-8 block w-full text-center bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold py-3 rounded-full hover:opacity-90 transition-opacity">Comprar paquete</a>
+                        </div>
+
+                        <div class="bg-brand-card p-8 rounded-2xl border-2 border-transparent">
+                            <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6">
+                                <i data-lucide="shopping-cart" class="text-brand-primary"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">E-commerce</h3>
+                            <p class="text-4xl font-extrabold text-white my-4">$4.500.000 <span class="text-lg font-normal text-brand-muted">COP</span></p>
+                            <ul class="space-y-3 text-brand-muted">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Todo lo de Sitio Básico</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Integración de pagos (Wompi, PayU)</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Catálogo de hasta 50 productos</li>
+                            </ul>
+                            <a href="#" class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors">Comprar paquete</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tab4" class="tab-content hidden">
+                    <div class="grid lg:grid-cols-3 gap-8 items-start">
+                        <div class="bg-brand-card p-8 rounded-2xl border-2 border-transparent">
+                            <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6">
+                                <i data-lucide="zap" class="text-brand-primary"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Campañas Express</h3>
+                            <p class="text-4xl font-extrabold text-white my-4">$750.000 <span class="text-lg font-normal text-brand-muted">COP</span></p>
+                            <ul class="space-y-3 text-brand-muted">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Gestión de $200.000 en pauta</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Diseño de 4 anuncios</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Optimización básica</li>
+                            </ul>
+                            <a href="#" class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors">Comprar paquete</a>
+                        </div>
+                        
+                        <div class="bg-brand-card p-8 rounded-2xl border-2 border-brand-primary shadow-2xl shadow-brand-primary/30 transform lg:scale-105">
+                            <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6">
+                                <i data-lucide="trending-up" class="text-brand-primary"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Estrategia Mensual</h3>
+                            <p class="text-4xl font-extrabold text-white my-4">$1.400.000 <span class="text-lg font-normal text-brand-muted">COP</span></p>
+                            <ul class="space-y-3 text-brand-muted">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Estrategia y objetivos mensuales</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Diseño de 10 anuncios A/B testing</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Reporte semanal de métricas</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Asesoría de presupuesto de pauta</li>
+                            </ul>
+                            <a href="#" class="mt-8 block w-full text-center bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold py-3 rounded-full hover:opacity-90 transition-opacity">Comprar paquete</a>
+                        </div>
+
+                        <div class="bg-brand-card p-8 rounded-2xl border-2 border-transparent">
+                            <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6">
+                                <i data-lucide="award" class="text-brand-primary"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Marketing 360</h3>
+                            <p class="text-4xl font-extrabold text-white my-4">$2.500.000 <span class="text-lg font-normal text-brand-muted">COP</span></p>
+                            <ul class="space-y-3 text-brand-muted">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Todo lo de Estrategia Mensual</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Estrategia de Email Marketing</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Consultoría SEO avanzada</li>
+                            </ul>
+                            <a href="#" class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors">Comprar paquete</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tab5" class="tab-content hidden">
+                    <div class="grid lg:grid-cols-3 gap-8 items-start">
+                        <div class="bg-brand-card p-8 rounded-2xl border-2 border-transparent">
+                            <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6">
+                                <i data-lucide="file-text" class="text-brand-primary"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Diseño Básico</h3>
+                            <p class="text-4xl font-extrabold text-white my-4">$300.000 <span class="text-lg font-normal text-brand-muted">COP</span></p>
+                            <ul class="space-y-3 text-brand-muted">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Diseño de Flyer o Brochur</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Formato digital y listo para imprenta</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Máximo 4 páginas</li>
+                            </ul>
+                            <a href="#" class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors">Comprar paquete</a>
+                        </div>
+                        
+                        <div class="bg-brand-card p-8 rounded-2xl border-2 border-brand-primary shadow-2xl shadow-brand-primary/30 transform lg:scale-105">
+                            <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6">
+                                <i data-lucide="book" class="text-brand-primary"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Catálogo Digital</h3>
+                            <p class="text-4xl font-extrabold text-white my-4">$950.000 <span class="text-lg font-normal text-brand-muted">COP</span></p>
+                            <ul class="space-y-3 text-brand-muted">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Diseño y maquetación (hasta 20 páginas)</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Optimización para web (PDF)</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Diseño de tabla de contenidos</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Gráficos y elementos visuales</li>
+                            </ul>
+                            <a href="#" class="mt-8 block w-full text-center bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold py-3 rounded-full hover:opacity-90 transition-opacity">Comprar paquete</a>
+                        </div>
+
+                        <div class="bg-brand-card p-8 rounded-2xl border-2 border-transparent">
+                            <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6">
+                                <i data-lucide="notebook-pen" class="text-brand-primary"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white">Reporte Premium</h3>
+                            <p class="text-4xl font-extrabold text-white my-4">$1.600.000 <span class="text-lg font-normal text-brand-muted">COP</span></p>
+                            <ul class="space-y-3 text-brand-muted">
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Todo lo de Catálogo Digital</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Maquetación de infografías complejas</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Sesión de revisión en vivo</li>
+                            </ul>
+                            <a href="#" class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors">Comprar paquete</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- ===== Sección Cómo Funciona ===== -->
         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-16 items-center">
-            <!-- Texto -->
             <div>
                 <h2 class="text-3xl sm:text-4xl font-bold text-white">¿Cómo funciona?</h2>
                 <p class="mt-4 text-lg text-brand-muted">
@@ -396,9 +559,7 @@
                 </p>
             </div>
             
-            <!-- Lista de Pasos -->
             <div class="space-y-8">
-                <!-- Paso 1 -->
                 <div class="flex items-start space-x-6">
                     <div class="flex-shrink-0 w-12 h-12 bg-brand-primary/20 rounded-full flex items-center justify-center">
                         <span class="font-bold text-xl text-brand-primary">01</span>
@@ -407,7 +568,6 @@
                         <p class="text-brand-muted">Te presentamos nuestro contacto o base de nuestro equipo y el proceso de diseño para que lo tengas claro.</p>
                     </div>
                 </div>
-                <!-- Paso 2 -->
                 <div class="flex items-start space-x-6">
                     <div class="flex-shrink-0 w-12 h-12 bg-brand-primary/20 rounded-full flex items-center justify-center">
                         <span class="font-bold text-xl text-brand-primary">02</span>
@@ -416,7 +576,6 @@
                         <p class="text-brand-muted">Te presentamos nuestro contacto o base de nuestro equipo y el proceso de diseño para que lo tengas claro.</p>
                     </div>
                 </div>
-                <!-- Paso 3 -->
                 <div class="flex items-start space-x-6">
                     <div class="flex-shrink-0 w-12 h-12 bg-brand-primary/20 rounded-full flex items-center justify-center">
                         <span class="font-bold text-xl text-brand-primary">03</span>
@@ -425,14 +584,11 @@
                         <p class="text-brand-muted">Te presentamos nuestro contacto o base de nuestro equipo y el proceso de diseño para que lo tengas claro.</p>
                     </div>
                 </div>
-                <!-- ... (Los pasos 4, 5, 6 son similares) ... -->
-            </div>
+                </div>
         </section>
 
-        <!-- ===== Sección de Contacto (CTA Final) ===== -->
         <section id="contacto" class="py-24 sm:py-32">
             <div class="relative py-24 sm:py-32 bg-brand-card rounded-3xl max-w-6xl mx-auto px-6 lg:px-8 overflow-hidden">
-                <!-- Fondo degradado -->
                 <div class="absolute inset-x-0 -top-20 -z-10 transform-gpu overflow-hidden blur-3xl" aria-hidden="true">
                     <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
                 </div>
@@ -446,7 +602,6 @@
                     </p>
                 </div>
 
-                <!-- Formulario de Contacto -->
                 <form action="#" method="POST" class="mt-16 max-w-xl mx-auto">
                     <div class="grid grid-cols-1 gap-y-6 gap-x-8">
                         <div>
@@ -480,6 +635,8 @@
                 </form>
             </div>
         </section>
+
+
 
         <!-- ===== Footer ===== -->
         <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">

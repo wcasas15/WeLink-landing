@@ -5,21 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WeLink - Diseño de Calidad para Microempresas</title>
     
-    <!-- Carga de Tailwind CSS (Biblioteca Externa) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-<script>
-  lucide.createIcons();
-</script>
     
-    <!-- Carga de Fuente (Google Fonts) -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- Carga de Lucide Icons (Biblioteca Externa para Iconos) -->
-    <script src="https://unpkg.com/lucide-dev@latest"></script>
-
     <style>
         /* Estilo base para aplicar la fuente y el color de fondo */
         body {
@@ -36,7 +29,6 @@
         }
     </style>
     
-    <!-- Configuración personalizada de Tailwind -->
     <script>
         tailwind.config = {
             theme: {
@@ -45,11 +37,11 @@
                         montserrat: ['Montserrat', 'sans-serif'],
                     },
                     colors: {
-                        'brand-dark': '#0B0A0F',      // Fondo principal
-                        'brand-card': '#1C1A20',      // Fondo de tarjetas
-                        'brand-light': '#F5F5F7',     // Texto principal
-                        'brand-muted': '#A1A1AA',     // Texto secundario
-                        'brand-primary': '#A855F7',   // Púrpura
+                        'brand-dark': '#0B0A0F',      // Fondo principal
+                        'brand-card': '#1C1A20',      // Fondo de tarjetas
+                        'brand-light': '#F5F5F7',     // Texto principal
+                        'brand-muted': '#A1A1AA',     // Texto secundario
+                        'brand-primary': '#A855F7',   // Púrpura
                         'brand-secondary': '#EC4899', // Rosa/Magenta
                     },
                     borderRadius: {
@@ -63,33 +55,31 @@
 </head>
 <body class="bg-brand-dark font-montserrat text-brand-light">
 
-    <!-- Contenedor principal -->
     <div class="overflow-x-hidden">
 
-        <!-- ===== Header / Navegación ===== -->
         <header class="absolute top-0 left-0 right-0 z-10">
             <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex justify-between items-center">
-                <!-- Logo -->
                 <div>
                     <a href="#" class="text-3xl font-bold text-white">WeLink</a>
                 </div>
                 
-                <!-- Links de Navegación (Escritorio) -->
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="#" class="text-brand-muted hover:text-white transition-colors">Explorar</a>
-                    <a href="#" class="text-brand-muted hover:text-white transition-colors">Sobre nosotros</a>
-                    <a href="#" class="text-brand-muted hover:text-white transition-colors">Nuestros Planes</a>
-                    <a href="#" class="text-brand-muted hover:text-white transition-colors">Como funciona</a>
+                    <a href="#nosotros" class="text-brand-muted hover:text-white transition-colors">Sobre nosotros</a>
+                    <a href="#servicios" class="text-brand-muted hover:text-white transition-colors">Nuestros Planes</a>
+                    <a href="#proceso" class="text-brand-muted hover:text-white transition-colors">Como funciona</a>
                 </div>
                 
-                <!-- Botón CTA (Escritorio) -->
                 <div class="hidden md:block">
-                    <a href="#contacto" class="bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold px-6 py-3 rounded-full hover:opacity-90 transition-opacity">
+                    <a 
+                        href="https://wa.me/573054534252?text=Hola,%20me%20gustaría%20iniciar%20una%20consulta%20de%20diseño%20que%20vi%20en%20su%20página%20web." 
+                        target="_blank" 
+                        class="bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold px-6 py-3 rounded-full hover:opacity-90 transition-opacity"
+                    >
                         Iniciar consulta
                     </a>
                 </div>
 
-                <!-- Botón de Menú (Móvil) -->
                 <div class="md:hidden">
                     <button id="menu-btn" class="text-white">
                         <i data-lucide="menu" class="w-6 h-6"></i>
@@ -97,29 +87,29 @@
                 </div>
             </nav>
             
-            <!-- Menú Móvil -->
             <div id="mobile-menu" class="hidden md:hidden bg-brand-card absolute top-full left-0 right-0 shadow-lg">
                 <div class="flex flex-col space-y-4 p-6">
-                    <a href="#" class="text-white text-lg">Explorar</a>
-                    <a href="#" class="text-white text-lg">Sobre nosotros</a>
-                    <a href="#" class="text-white text-lg">Nuestros Planes</a>
-                    <a href="#" class="text-white text-lg">Como funciona</a>
-                    <a href="#contacto" class="bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold px-6 py-3 rounded-full hover:opacity-90 transition-opacity text-center mt-4">
+                    <a href="#explorar" class="text-white text-lg">Explorar</a>
+                    <a href="#nosotros" class="text-white text-lg">Sobre nosotros</a>
+                    <a href="#servicios" class="text-white text-lg">Nuestros Planes</a>
+                    <a href="#proceso" class="text-white text-lg">Como funciona</a>
+                    <a 
+                        href="https://wa.me/573054534252?text=Hola,%20me%20gustaría%20iniciar%20una%20consulta%20de%20diseño%20que%20vi%20en%20su%20página%20web." 
+                        target="_blank" 
+                        class="bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold px-6 py-3 rounded-full hover:opacity-90 transition-opacity text-center mt-4"
+                    >
                         Iniciar consulta
                     </a>
                 </div>
             </div>
         </header>
 
-        <!-- ===== Hero Section ===== -->
         <main class="relative pt-32 lg:pt-48">
-            <!-- Fondo degradado borroso -->
             <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
                 <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
             </div>
 
             <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
-                <!-- Contenido de Texto -->
                 <div class="text-center lg:text-left">
                     <span class="text-brand-secondary font-semibold">Más que una marca</span>
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mt-4 leading-tight">
@@ -131,46 +121,43 @@
                     </p>
                     <div class="mt-10">
                         <a href="#planes" class="bg-white text-brand-dark font-semibold px-8 py-4 rounded-full hover:bg-gray-200 transition-colors">
-                            Diseños que vende
+                            Diseños que pueden vender
                         </a>
                     </div>
                 </div>
                 
-                <!-- Imagen -->
                 <div class="hidden lg:block">
                     <img src="https://images.pexels.com/photos/4050388/pexels-photo-4050388.jpeg" 
-                         alt="Diseño de interfaz de usuario moderno para startups y microempresas" 
-                         class="rounded-2xl shadow-2xl w-full h-auto object-cover">
+                        alt="Diseño de interfaz de usuario moderno para startups y microempresas" 
+                        class="rounded-2xl shadow-2xl w-full h-auto object-cover">
                 </div>
             </section>
         </main>
 
-        <!-- ===== Sección de Características ===== -->
         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
             <div class="grid md:grid-cols-3 gap-8">
-                                <div class="bg-brand-card p-8 rounded-2xl transform hover:scale-105 transition-transform duration-300">
+                <div class="bg-brand-card p-8 rounded-2xl transform hover:scale-105 transition-transform duration-300">
                     <div class="w-12 h-12 bg-brand-primary/20 rounded-lg flex items-center justify-center mb-6">
-                        <i data-lucide="palette" class="text-brand-primary"></i>                     </div>
+                        <i data-lucide="palette" class="text-brand-primary"></i> </div>
                     <h3 class="text-xl font-bold text-white mb-3">Diseño que vende</h3>
                     <p class="text-brand-muted">Te presentamos un diseño premium, totalmente personalizado para tu modelo de negocio.</p>
                 </div>
-                                <div class="bg-brand-card p-8 rounded-2xl transform hover:scale-105 transition-transform duration-300">
+                <div class="bg-brand-card p-8 rounded-2xl transform hover:scale-105 transition-transform duration-300">
                     <div class="w-12 h-12 bg-brand-primary/20 rounded-lg flex items-center justify-center mb-6">
-                        <i data-lucide="dollar-sign" class="text-brand-primary"></i>                     </div>
+                        <i data-lucide="dollar-sign" class="text-brand-primary"></i>  </div>
                     <h3 class="text-xl font-bold text-white mb-3">Planes Sin Sorpresas</h3>
                     <p class="text-brand-muted">Te presentamos planes cerrados de servicios, no pagas costos extras ni ocultos.</p>
                 </div>
-                                <div class="bg-brand-card p-8 rounded-2xl transform hover:scale-105 transition-transform duration-300">
+                <div class="bg-brand-card p-8 rounded-2xl transform hover:scale-105 transition-transform duration-300">
                     <div class="w-12 h-12 bg-brand-primary/20 rounded-lg flex items-center justify-center mb-6">
-                        <i data-lucide="star" class="text-brand-primary"></i>                     </div>
+                        <i data-lucide="star" class="text-brand-primary"></i></div>
                     <h3 class="text-xl font-bold text-white mb-3">Garantía de Calidad</h3>
                     <p class="text-brand-muted">Te presentamos un diseño premium, totalmente personalizado para tu modelo de negocio.</p>
                 </div>
             </div>
         </section>
 
-        <!-- ===== Sección de Proceso ===== -->
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <section id="proceso" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div class="text-center max-w-3xl mx-auto">
                 <h2 class="text-3xl sm:text-4xl font-bold text-white">
                     Tu Éxito es <span class="bg-gradient-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent">Nuestro Proceso</span>
@@ -181,50 +168,43 @@
             </div>
             
             <div class="mt-20 grid md:grid-cols-3 gap-10">
-                <!-- Paso 1 -->
                 <div class="flex flex-col items-center text-center">
                     <img src="https://placehold.co/400x300/1C1A20/A855F7?text=Briefing" 
-                         onerror="this.src='https://placehold.co/400x300/1C1A20/A855F7?text=Briefing'"
-                         alt="Briefing y Estrategia" class="rounded-2xl shadow-lg mb-6 w-full">
+                        onerror="this.src='https://placehold.co/400x300/1C1A20/A855F7?text=Briefing'"
+                        alt="Briefing y Estrategia" class="rounded-2xl shadow-lg mb-6 w-full">
                     <h3 class="text-xl font-bold text-white">Briefing y estrategia</h3>
                     <p class="text-brand-muted mt-2">Es el punto de partida clave para alinear tus objetivos con un producto de valor a tu medida.</p>
                 </div>
-                <!-- Paso 2 -->
                 <div class="flex flex-col items-center text-center">
                     <img src="https://placehold.co/400x300/1C1A20/EC4899?text=Ejecución" 
-                         onerror="this.src='https://placehold.co/400x300/1C1A20/EC4899?text=Ejecución'"
-                         alt="Ejecución Apasionada" class="rounded-2xl shadow-lg mb-6 w-full">
+                        onerror="this.src='https://placehold.co/400x300/1C1A20/EC4899?text=Ejecución'"
+                        alt="Ejecución Apasionada" class="rounded-2xl shadow-lg mb-6 w-full">
                     <h3 class="text-xl font-bold text-white">Ejecución apasionada</h3>
                     <p class="text-brand-muted mt-2">Aplicamos la estrategia y diseño, con un seguimiento de los procesos y avances.</p>
                 </div>
-                <!-- Paso 3 -->
                 <div class="flex flex-col items-center text-center">
                     <img src="https://placehold.co/400x300/1C1A20/A855F7?text=Entrega" 
-                         onerror="this.src='https://placehold.co/400x300/1C1A20/A855F7?text=Entrega'"
-                         alt="Control de Calidad y Entrega" class="rounded-2xl shadow-lg mb-6 w-full">
+                        onerror="this.src='https://placehold.co/400x300/1C1A20/A855F7?text=Entrega'"
+                        alt="Control de Calidad y Entrega" class="rounded-2xl shadow-lg mb-6 w-full">
                     <h3 class="text-xl font-bold text-white">Control de Calidad y Entrega</h3>
                     <p class="text-brand-muted mt-2">Auditamos todo el trabajo realizado, y listo para impulsar tu negocio.</p>
                 </div>
             </div>
         </section>
 
-        <!-- ===== Sección Sobre Nosotros ===== -->
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-16 items-center">
-            <!-- Imagen -->
+        <section id="nosotros" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-16 items-center">
             <div>
                 <img src="https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg" 
-                     onerror="this.src='https://placehold.co/600x450/1C1A20/FFFFFF?text=Equipo+en+reunión'"
-                     alt="Equipo de WeLink en una reunión estratégica" 
-                     class="rounded-2xl shadow-xl w-full object-cover">
+                    onerror="this.src='https://placehold.co/600x450/1C1A20/FFFFFF?text=Equipo+en+reunión'"
+                    alt="Equipo de WeLink en una reunión estratégica" 
+                    class="rounded-2xl shadow-xl w-full object-cover">
             </div>
             
-            <!-- Texto -->
             <div>
                 <span class="font-semibold text-brand-primary">Un poco sobre nosotros</span>
                 <h2 class="text-3xl sm:text-4xl font-bold text-white mt-4">Tu Socio de Diseño Estratégico en Bogotá</h2>
                 
                 <div class="mt-10 space-y-8">
-                    <!-- Valores -->
                     <div class="flex items-start space-x-4">
                         <div class="flex-shrink-0 w-12 h-12 bg-brand-primary/20 rounded-lg flex items-center justify-center">
                             <i data-lucide="heart" class="text-brand-primary"></i>
@@ -234,7 +214,6 @@
                             <p class="mt-2 text-brand-muted">Diseño estratégico con un propósito, colaboración abierta y transparente, y una búsqueda incansable de la excelencia. Creemos en construir relaciones sólidas.</p>
                         </div>
                     </div>
-                    <!-- Misión -->
                     <div class="flex items-start space-x-4">
                         <div class="flex-shrink-0 w-12 h-12 bg-brand-primary/20 rounded-lg flex items-center justify-center">
                             <i data-lucide="target" class="text-brand-primary"></i>
@@ -248,40 +227,34 @@
             </div>
         </section>
 
-        <!-- ===== Sección de Servicios ===== -->
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <section id="servicios" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <h2 class="text-3xl sm:text-4xl font-bold text-white text-center">Nuestras características y servicios</h2>
             
             <div class="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                <!-- Servicio 1 -->
                 <div class="bg-brand-card p-6 rounded-2xl text-center flex flex-col items-center">
                     <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center">
                         <i data-lucide="sparkles" class="text-brand-primary"></i>
                     </div>
                     <h3 class="mt-4 font-bold text-white">Identidad y Branding</h3>
                 </div>
-                <!-- Servicio 2 -->
                 <div class="bg-brand-card p-6 rounded-2xl text-center flex flex-col items-center">
                     <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center">
                         <i data-lucide="thumbs-up" class="text-brand-primary"></i>
                     </div>
                     <h3 class="mt-4 font-bold text-white">Contenido para redes</h3>
                 </div>
-                <!-- Servicio 3 -->
                 <div class="bg-brand-card p-6 rounded-2xl text-center flex flex-col items-center">
                     <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center">
                         <i data-lucide="layout-template" class="text-brand-primary"></i>
                     </div>
                     <h3 class="mt-4 font-bold text-white">Páginas Web y Tiendas</h3>
                 </div>
-                <!-- Servicio 4 -->
                 <div class="bg-brand-card p-6 rounded-2xl text-center flex flex-col items-center">
                     <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center">
                         <i data-lucide="line-chart" class="text-brand-primary"></i>
                     </div>
                     <h3 class="mt-4 font-bold text-white">Marketing Digital</h3>
                 </div>
-                <!-- Servicio 5 -->
                 <div class="bg-brand-card p-6 rounded-2xl text-center flex flex-col items-center">
                     <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center">
                         <i data-lucide="book-open" class="text-brand-primary"></i>
@@ -290,7 +263,6 @@
                 </div>
             </div>
 
-            <!-- CTA Trabajos -->
             <div class="text-center mt-20">
                 <a href="#" class="bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold px-8 py-4 rounded-full hover:opacity-90 transition-opacity">
                     Mira nuestros trabajos
@@ -298,7 +270,6 @@
             </div>
         </section>
 
-        <!-- ===== Sección de Precios ===== -->
         <section id="planes" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div class="text-center max-w-3xl mx-auto">
                 <span class="font-semibold text-brand-primary">Planes de precios</span>
@@ -327,7 +298,11 @@
                                 <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Paleta de color</li>
                                 <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Tipografías</li>
                             </ul>
-                            <a href="#" class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors">Comprar paquete</a>
+                            <a 
+                                href="https://wa.me/573054534252?text=Hola,%20me%20interesa%20el%20paquete%20'Básico'%20de%20Identidad%20visual." 
+                                target="_blank"
+                                class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors"
+                            >Comprar paquete</a>
                         </div>
                         
                         <div class="bg-brand-card p-8 rounded-2xl border-2 border-brand-primary shadow-2xl shadow-brand-primary/30 transform lg:scale-105">
@@ -342,7 +317,11 @@
                                 <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Diseño de 5 posts</li>
                                 <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Plantillas editables</li>
                             </ul>
-                            <a href="#" class="mt-8 block w-full text-center bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold py-3 rounded-full hover:opacity-90 transition-opacity">Comprar paquete</a>
+                            <a 
+                                href="https://wa.me/573054534252?text=Hola,%20me%20interesa%20el%20paquete%20'Estándar'%20de%20Identidad%20visual." 
+                                target="_blank"
+                                class="mt-8 block w-full text-center bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold py-3 rounded-full hover:opacity-90 transition-opacity"
+                            >Comprar paquete</a>
                         </div>
 
                         <div class="bg-brand-card p-8 rounded-2xl border-2 border-transparent">
@@ -356,7 +335,11 @@
                                 <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Diseño de 10 posts</li>
                                 <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Asesoría de marca</li>
                             </ul>
-                            <a href="#" class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors">Comprar paquete</a>
+                            <a 
+                                href="https://wa.me/573054534252?text=Hola,%20me%20interesa%20el%20paquete%20'Premium'%20de%20Identidad%20visual." 
+                                target="_blank"
+                                class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors"
+                            >Comprar paquete</a>
                         </div>
                     </div>
                 </div>
@@ -374,7 +357,11 @@
                                 <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Propuesta de Copy</li>
                                 <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Entrega en 48 horas</li>
                             </ul>
-                            <a href="#" class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors">Comprar paquete</a>
+                            <a 
+                                href="https://wa.me/573054534252?text=Hola,%20me%20interesa%20el%20paquete%20'Básico'%20de%20Creación%20de%20contenido." 
+                                target="_blank"
+                                class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors"
+                            >Comprar paquete</a>
                         </div>
                         
                         <div class="bg-brand-card p-8 rounded-2xl border-2 border-brand-primary shadow-2xl shadow-brand-primary/30 transform lg:scale-105">
@@ -389,7 +376,11 @@
                                 <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Reunión de briefing semanal</li>
                                 <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Archivos fuente editables</li>
                             </ul>
-                            <a href="#" class="mt-8 block w-full text-center bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold py-3 rounded-full hover:opacity-90 transition-opacity">Comprar paquete</a>
+                            <a 
+                                href="https://wa.me/573054534252?text=Hola,%20me%20interesa%20el%20paquete%20'Estándar'%20de%20Creación%20de%20contenido." 
+                                target="_blank"
+                                class="mt-8 block w-full text-center bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold py-3 rounded-full hover:opacity-90 transition-opacity"
+                            >Comprar paquete</a>
                         </div>
 
                         <div class="bg-brand-card p-8 rounded-2xl border-2 border-transparent">
@@ -403,7 +394,11 @@
                                 <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Diseño de Reels (3 por mes)</li>
                                 <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Reporte de métricas</li>
                             </ul>
-                            <a href="#" class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors">Comprar paquete</a>
+                            <a 
+                                href="https://wa.me/573054534252?text=Hola,%20me%20interesa%20el%20paquete%20'Premium'%20de%20Creación%20de%20contenido." 
+                                target="_blank"
+                                class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors"
+                            >Comprar paquete</a>
                         </div>
                     </div>
                 </div>
@@ -421,7 +416,11 @@
                                 <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Formulario de contacto</li>
                                 <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Diseño responsive</li>
                             </ul>
-                            <a href="#" class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors">Comprar paquete</a>
+                            <a 
+                                href="https://wa.me/573054534252?text=Hola,%20me%20interesa%20el%20paquete%20'Landing%20Page'%20de%20Desarrollo%20Web." 
+                                target="_blank"
+                                class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors"
+                            >Comprar paquete</a>
                         </div>
                         
                         <div class="bg-brand-card p-8 rounded-2xl border-2 border-brand-primary shadow-2xl shadow-brand-primary/30 transform lg:scale-105">
@@ -436,122 +435,54 @@
                                 <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Optimización SEO básica</li>
                                 <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Dominio y Hosting por 1 año</li>
                             </ul>
-                            <a href="#" class="mt-8 block w-full text-center bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold py-3 rounded-full hover:opacity-90 transition-opacity">Comprar paquete</a>
+                            <a 
+                                href="https://wa.me/573054534252?text=Hola,%20me%20interesa%20el%20paquete%20'Sitio%20Básico'%20de%20Desarrollo%20Web." 
+                                target="_blank"
+                                class="mt-8 block w-full text-center bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold py-3 rounded-full hover:opacity-90 transition-opacity"
+                            >Comprar paquete</a>
                         </div>
-
+                        
                         <div class="bg-brand-card p-8 rounded-2xl border-2 border-transparent">
                             <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6">
                                 <i data-lucide="shopping-cart" class="text-brand-primary"></i>
                             </div>
-                            <h3 class="text-2xl font-bold text-white">E-commerce</h3>
+                            <h3 class="text-2xl font-bold text-white">Tienda Online</h3>
                             <p class="text-4xl font-extrabold text-white my-4">$4.500.000 <span class="text-lg font-normal text-brand-muted">COP</span></p>
                             <ul class="space-y-3 text-brand-muted">
-                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Todo lo de Sitio Básico</li>
-                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Integración de pagos (Wompi, PayU)</li>
-                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Catálogo de hasta 50 productos</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Integración con WooCommerce/Shopify</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Configuración de pagos y envíos</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Carga de hasta 20 productos</li>
+                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Dominio y Hosting por 1 año</li>
                             </ul>
-                            <a href="#" class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors">Comprar paquete</a>
+                            <a 
+                                href="https://wa.me/573054534252?text=Hola,%20me%20interesa%20el%20paquete%20'Tienda%20Online'%20de%20Desarrollo%20Web." 
+                                target="_blank"
+                                class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors"
+                            >Comprar paquete</a>
                         </div>
                     </div>
                 </div>
 
                 <div id="tab4" class="tab-content hidden">
-                    <div class="grid lg:grid-cols-3 gap-8 items-start">
-                        <div class="bg-brand-card p-8 rounded-2xl border-2 border-transparent">
-                            <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6">
-                                <i data-lucide="zap" class="text-brand-primary"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white">Campañas Express</h3>
-                            <p class="text-4xl font-extrabold text-white my-4">$750.000 <span class="text-lg font-normal text-brand-muted">COP</span></p>
-                            <ul class="space-y-3 text-brand-muted">
-                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Gestión de $200.000 en pauta</li>
-                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Diseño de 4 anuncios</li>
-                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Optimización básica</li>
-                            </ul>
-                            <a href="#" class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors">Comprar paquete</a>
-                        </div>
-                        
-                        <div class="bg-brand-card p-8 rounded-2xl border-2 border-brand-primary shadow-2xl shadow-brand-primary/30 transform lg:scale-105">
-                            <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6">
-                                <i data-lucide="trending-up" class="text-brand-primary"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white">Estrategia Mensual</h3>
-                            <p class="text-4xl font-extrabold text-white my-4">$1.400.000 <span class="text-lg font-normal text-brand-muted">COP</span></p>
-                            <ul class="space-y-3 text-brand-muted">
-                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Estrategia y objetivos mensuales</li>
-                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Diseño de 10 anuncios A/B testing</li>
-                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Reporte semanal de métricas</li>
-                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Asesoría de presupuesto de pauta</li>
-                            </ul>
-                            <a href="#" class="mt-8 block w-full text-center bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold py-3 rounded-full hover:opacity-90 transition-opacity">Comprar paquete</a>
-                        </div>
-
-                        <div class="bg-brand-card p-8 rounded-2xl border-2 border-transparent">
-                            <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6">
-                                <i data-lucide="award" class="text-brand-primary"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white">Marketing 360</h3>
-                            <p class="text-4xl font-extrabold text-white my-4">$2.500.000 <span class="text-lg font-normal text-brand-muted">COP</span></p>
-                            <ul class="space-y-3 text-brand-muted">
-                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Todo lo de Estrategia Mensual</li>
-                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Estrategia de Email Marketing</li>
-                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Consultoría SEO avanzada</li>
-                            </ul>
-                            <a href="#" class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors">Comprar paquete</a>
-                        </div>
+                    <div class="text-center p-12 bg-brand-card rounded-2xl">
+                        <h3 class="text-2xl font-bold text-white">Pronto: Planes de Marketing Digital</h3>
+                        <p class="text-brand-muted mt-2">¡Estamos preparando nuestros paquetes de Marketing Digital para ti! Pregúntanos por una cotización personalizada.</p>
+                        <a href="https://wa.me/573054534252?text=Hola,%20me%20interesa%20saber%20sobre%20los%20planes%20de%20Marketing%20Digital." target="_blank" class="mt-4 inline-block text-brand-secondary hover:text-brand-primary transition-colors">Contactar para cotización</a>
                     </div>
                 </div>
-
+                
                 <div id="tab5" class="tab-content hidden">
-                    <div class="grid lg:grid-cols-3 gap-8 items-start">
-                        <div class="bg-brand-card p-8 rounded-2xl border-2 border-transparent">
-                            <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6">
-                                <i data-lucide="file-text" class="text-brand-primary"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white">Diseño Básico</h3>
-                            <p class="text-4xl font-extrabold text-white my-4">$300.000 <span class="text-lg font-normal text-brand-muted">COP</span></p>
-                            <ul class="space-y-3 text-brand-muted">
-                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Diseño de Flyer o Brochur</li>
-                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Formato digital y listo para imprenta</li>
-                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Máximo 4 páginas</li>
-                            </ul>
-                            <a href="#" class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors">Comprar paquete</a>
-                        </div>
-                        
-                        <div class="bg-brand-card p-8 rounded-2xl border-2 border-brand-primary shadow-2xl shadow-brand-primary/30 transform lg:scale-105">
-                            <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6">
-                                <i data-lucide="book" class="text-brand-primary"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white">Catálogo Digital</h3>
-                            <p class="text-4xl font-extrabold text-white my-4">$950.000 <span class="text-lg font-normal text-brand-muted">COP</span></p>
-                            <ul class="space-y-3 text-brand-muted">
-                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Diseño y maquetación (hasta 20 páginas)</li>
-                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Optimización para web (PDF)</li>
-                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Diseño de tabla de contenidos</li>
-                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Gráficos y elementos visuales</li>
-                            </ul>
-                            <a href="#" class="mt-8 block w-full text-center bg-gradient-to-r from-brand-primary to-brand-secondary text-white font-semibold py-3 rounded-full hover:opacity-90 transition-opacity">Comprar paquete</a>
-                        </div>
-
-                        <div class="bg-brand-card p-8 rounded-2xl border-2 border-transparent">
-                            <div class="w-16 h-16 bg-brand-primary/20 rounded-full flex items-center justify-center mb-6">
-                                <i data-lucide="notebook-pen" class="text-brand-primary"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white">Reporte Premium</h3>
-                            <p class="text-4xl font-extrabold text-white my-4">$1.600.000 <span class="text-lg font-normal text-brand-muted">COP</span></p>
-                            <ul class="space-y-3 text-brand-muted">
-                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Todo lo de Catálogo Digital</li>
-                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Maquetación de infografías complejas</li>
-                                <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-2"></i>Sesión de revisión en vivo</li>
-                            </ul>
-                            <a href="#" class="mt-8 block w-full text-center bg-gray-700 text-white font-semibold py-3 rounded-full hover:bg-gray-600 transition-colors">Comprar paquete</a>
-                        </div>
+                    <div class="text-center p-12 bg-brand-card rounded-2xl">
+                        <h3 class="text-2xl font-bold text-white">Pronto: Planes de Diseño Editorial</h3>
+                        <p class="text-brand-muted mt-2">¡Estamos preparando nuestros paquetes de Diseño Editorial para ti! Pregúntanos por una cotización personalizada.</p>
+                        <a href="https://wa.me/573054534252?text=Hola,%20me%20interesa%20saber%20sobre%20los%20planes%20de%20Diseño%20Editorial." target="_blank" class="mt-4 inline-block text-brand-secondary hover:text-brand-primary transition-colors">Contactar para cotización</a>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-16 items-center">
+         <!-- ===== Sección Cómo Funciona ===== -->
+         <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-16 items-center">
+            <!-- Texto -->
             <div>
                 <h2 class="text-3xl sm:text-4xl font-bold text-white">¿Cómo funciona?</h2>
                 <p class="mt-4 text-lg text-brand-muted">
@@ -559,7 +490,9 @@
                 </p>
             </div>
             
+            <!-- Lista de Pasos -->
             <div class="space-y-8">
+                <!-- Paso 1 -->
                 <div class="flex items-start space-x-6">
                     <div class="flex-shrink-0 w-12 h-12 bg-brand-primary/20 rounded-full flex items-center justify-center">
                         <span class="font-bold text-xl text-brand-primary">01</span>
@@ -568,6 +501,7 @@
                         <p class="text-brand-muted">Te presentamos nuestro contacto o base de nuestro equipo y el proceso de diseño para que lo tengas claro.</p>
                     </div>
                 </div>
+                <!-- Paso 2 -->
                 <div class="flex items-start space-x-6">
                     <div class="flex-shrink-0 w-12 h-12 bg-brand-primary/20 rounded-full flex items-center justify-center">
                         <span class="font-bold text-xl text-brand-primary">02</span>
@@ -576,6 +510,7 @@
                         <p class="text-brand-muted">Te presentamos nuestro contacto o base de nuestro equipo y el proceso de diseño para que lo tengas claro.</p>
                     </div>
                 </div>
+                <!-- Paso 3 -->
                 <div class="flex items-start space-x-6">
                     <div class="flex-shrink-0 w-12 h-12 bg-brand-primary/20 rounded-full flex items-center justify-center">
                         <span class="font-bold text-xl text-brand-primary">03</span>
@@ -584,11 +519,14 @@
                         <p class="text-brand-muted">Te presentamos nuestro contacto o base de nuestro equipo y el proceso de diseño para que lo tengas claro.</p>
                     </div>
                 </div>
-                </div>
+                <!-- ... (Los pasos 4, 5, 6 son similares) ... -->
+            </div>
         </section>
 
+        <!-- ===== Sección de Contacto (CTA Final) ===== -->
         <section id="contacto" class="py-24 sm:py-32">
             <div class="relative py-24 sm:py-32 bg-brand-card rounded-3xl max-w-6xl mx-auto px-6 lg:px-8 overflow-hidden">
+                <!-- Fondo degradado -->
                 <div class="absolute inset-x-0 -top-20 -z-10 transform-gpu overflow-hidden blur-3xl" aria-hidden="true">
                     <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
                 </div>
@@ -602,6 +540,7 @@
                     </p>
                 </div>
 
+                <!-- Formulario de Contacto -->
                 <form action="#" method="POST" class="mt-16 max-w-xl mx-auto">
                     <div class="grid grid-cols-1 gap-y-6 gap-x-8">
                         <div>
@@ -636,112 +575,57 @@
             </div>
         </section>
 
-
-
-        <!-- ===== Footer ===== -->
-        <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-            <div class="grid md:grid-cols-4 lg:grid-cols-6 gap-12">
-                <!-- Logo y Social -->
-                <div class="md:col-span-4 lg:col-span-2">
-                    <a href="#" class="text-3xl font-bold text-white">WeLink</a>
-                    <p class="text-brand-muted mt-4 max-w-xs">Diseño de calidad para microempresas que buscan crecer.</p>
-                    <div class="mt-6">
-                        <a href="#" class="text-brand-muted hover:text-white transition-colors">
-                            <i data-lucide="instagram" class="w-6 h-6"></i>
-                            <span class="sr-only">Instagram</span>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Links 1 -->
-                <div>
-                    <h4 class="font-semibold text-white">Compañía</h4>
-                    <ul class="mt-4 space-y-3">
-                        <li><a href="#" class="text-brand-muted hover:text-white">Inicio</a></li>
-                        <li><a href="#" class="text-brand-muted hover:text-white">¿Por qué nosotros?</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Links 2 -->
-                <div>
-                    <h4 class="font-semibold text-white">Servicios</h4>
-                    <ul class="mt-4 space-y-3">
-                        <li><a href="#" class="text-brand-muted hover:text-white">Servicios</a></li>
-                        <li><a href="#" class="text-brand-muted hover:text-white">Planes y precios</a></li>
-                        <li><a href="#" class="text-brand-muted hover:text-white">¿Cómo funciona?</a></li>
-                    </ul>
-                </div>
-
-                <!-- Links 3 -->
-                <div>
-                    <h4 class="font-semibold text-white">Legal</h4>
-                    <ul class="mt-4 space-y-3">
-                        <li><a href="#" class="text-brand-muted hover:text-white">Política de privacidad</a></li>
-                        <li><a href="#" class="text-brand-muted hover:text-white">Términos y condiciones</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Copyright -->
-            <div class="mt-16 pt-8 border-t border-gray-800 text-sm text-brand-muted text-center">
-                <p>&copy; 2025 WeLink. All rights reserved.</p>
+        <footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-brand-card mt-12">
+            <div class="text-center text-brand-muted">
+                <p>&copy; 2025 WeLink. Todos los derechos reservados. Diseñado y desarrollado con pasión.</p>
             </div>
         </footer>
 
     </div>
-
-    <!-- Scripts de Funcionalidad -->
+    
     <script>
-        // Inicializa los iconos de Lucide
-        lucide.createIcons();
+        // Funcionalidad de Pestañas (Tabs) en la sección de Precios
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetTab = button.dataset.tab;
+
+                // 1. Ocultar todos los contenidos de las pestañas
+                tabContents.forEach(content => {
+                    content.classList.add('hidden');
+                });
+
+                // 2. Mostrar el contenido de la pestaña seleccionada
+                document.getElementById(targetTab).classList.remove('hidden');
+
+                // 3. Actualizar la clase activa en los botones
+                tabButtons.forEach(btn => {
+                    btn.classList.remove('bg-brand-primary', 'text-white');
+                    btn.classList.add('bg-brand-card', 'text-brand-muted', 'hover:bg-gray-700');
+                });
+                
+                button.classList.add('bg-brand-primary', 'text-white');
+                button.classList.remove('bg-brand-card', 'text-brand-muted', 'hover:bg-gray-700');
+            });
+        });
 
         // Funcionalidad del Menú Móvil
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            // Cambiar icono de menú a 'X' y viceversa
-            const icon = menuBtn.querySelector('i');
-            if (mobileMenu.classList.contains('hidden')) {
-                icon.setAttribute('data-lucide', 'menu');
-            } else {
-                icon.setAttribute('data-lucide', 'x');
-            }
-            lucide.createIcons(); // Re-renderizar icono
-        });
 
-        // Funcionalidad de Pestañas de Precios
-        const tabsContainer = document.getElementById('tabs-container');
-        const tabsContent = document.getElementById('tabs-content');
-        
-        if (tabsContainer && tabsContent) {
-            const tabButtons = tabsContainer.querySelectorAll('.tab-btn');
-            const tabPanels = tabsContent.querySelectorAll('.tab-content');
-
-            tabButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const tabId = button.getAttribute('data-tab');
-
-                    // Actualizar botones
-                    tabButtons.forEach(btn => {
-                        btn.classList.remove('bg-brand-primary', 'text-white');
-                        btn.classList.add('bg-brand-card', 'text-brand-muted', 'hover:bg-gray-700');
-                    });
-                    button.classList.add('bg-brand-primary', 'text-white');
-                    button.classList.remove('bg-brand-card', 'text-brand-muted', 'hover:bg-gray-700');
-
-                    // Actualizar contenido
-                    tabPanels.forEach(panel => {
-                        if (panel.id === tabId) {
-                            panel.classList.remove('hidden');
-                        } else {
-                            panel.classList.add('hidden');
-                        }
-                    });
-                });
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
             });
         }
     </script>
+    <script>
+        // Inicializa Lucide Icons
+        lucide.createIcons();
+    </script>
 </body>
 </html>
+
+
